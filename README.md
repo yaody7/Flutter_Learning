@@ -1,5 +1,5 @@
 
-# Flutter Learnin
+# Flutter Learning
 ```
 最近在自学一下Flutter，所以将自己学习过程中做的小App上传上来，并记录一些学习心得以及"坑"。
 ```
