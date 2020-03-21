@@ -6,24 +6,13 @@ class CustomRoute extends PageRouteBuilder{
   CustomRoute(this.page):super(
     transitionDuration:Duration(seconds: 1),
     pageBuilder:(context, animation1, animation2){
-      return page;
-    },
-    transitionsBuilder:(context, animation1, animation2, child){
       return RotationTransition(
-          turns: Tween(begin: 0.0, end: 1.0)
-            .animate(CurvedAnimation(
-              parent: animation1,
-              curve: Curves.fastOutSlowIn
-            )),
+        turns: animation1,
         child: FadeTransition(
-          opacity: Tween(begin: 0.0, end: 1.0)
-              .animate(CurvedAnimation(
-              parent: animation1,
-              curve: Curves.fastOutSlowIn
-          )),
-          child: child,
+          opacity: animation1,
+          child: page,
         ),
       );
-    }
+    },
   );
 }
